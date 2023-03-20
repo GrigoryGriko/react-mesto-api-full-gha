@@ -12,7 +12,6 @@ Frontend https://grigorygriko.student.nomoredomains.work
 
 Backend https://api.grigorygriko.student.nomoredomains.work
 
-
 ## Описание
 
 1. Реализовано логгирование запросов и ошибок;
