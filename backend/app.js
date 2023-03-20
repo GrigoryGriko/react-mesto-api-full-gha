@@ -18,15 +18,16 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(CONNECT_DB);
 
+app.use((req, res, next) => {
+  next(new NotFoundError('Данный ресурс не найден'));
+});
+
 app.use(requestLogger);
 
 app.use(routes);
 
 app.use(errorLogger);
 
-app.use((req, res, next) => {
-  next(new NotFoundError('Данный ресурс не найден'));
-});
 app.use(errors());
 app.use(errorHandler);
 
